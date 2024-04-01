@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Raft-01</module>
+        <module>Raft-02</module>
     </modules>
 
     <properties>
