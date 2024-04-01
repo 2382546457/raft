@@ -260,7 +260,7 @@ public abstract class AbstractClientService implements ClientService {
             // should be in another thread to avoid dead locking.
             RpcUtils.runClosureInExecutor(currExecutor, done,
                     new Status(RaftError.EINTR, "Sending rpc was interrupted"));
-        } catch (final RemotingException e) {
+        } catch (final com.alipay.remoting.exception.RemotingException e) {
             future.failure(e);
             // should be in another thread to avoid dead locking.
             RpcUtils.runClosureInExecutor(currExecutor, done, new Status(RaftError.EINTERNAL,
